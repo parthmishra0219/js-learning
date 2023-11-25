@@ -53,7 +53,47 @@ let myObj ={
 
 
 const myFunction = function(){        // return type = object function
-    console.log("Hello world");
+    // console.log("Hello world");
 }
 
-console.log(typeof anotherId);
+// console.log(typeof anotherId);
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(primitive)    ,  Heap(non-primitive)
+
+let myYoutubename = "parthsarthy@google.com"
+
+let anothername = myYoutubename
+
+anothername = "parthCode"
+
+
+// console.log(anothername);
+// console.log(myYoutubename);
+
+let userOne = {
+
+    email: "parth@gmail.com",
+    upi: "user@ybl"
+
+}
+// let userTwo = {
+
+//     email: "parthsarthy@gmail.com",
+//     upi: "userTwo@ybl"
+
+// }
+let userTwo = userOne
+
+userTwo.email= "parthmishra@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
+
+
+
