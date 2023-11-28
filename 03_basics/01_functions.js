@@ -2,7 +2,7 @@
 
 
 
-function sayMyName () {
+// function sayMyName () {
 
 //  console.log("p");
 // console.log("a");
@@ -10,7 +10,7 @@ function sayMyName () {
 // console.log("t");
 // console.log("h");
 
-}
+// }
 
 // sayMyName()
 
@@ -65,6 +65,7 @@ function loginUserMessage(username ="parth"){
     //     return
         
     // }
+
     if (!username ) {
         console.log("plz enter a username");
         return
@@ -74,6 +75,66 @@ function loginUserMessage(username ="parth"){
 
 }
 
-console.log(loginUserMessage("sam"));           // this will overide the given default value as a "parth " to "sam"
+// console.log(loginUserMessage("sam"));           // this will overide the given default value as a "parth " to "sam"
+
 // console.log(loginUserMessage(" "));         // nothing has passed 
 // console.log(loginUserMessage());           // this will return undefined.        
+
+
+
+
+
+// function calculateCartPrice(num1) {
+
+//     return num1
+    
+// }
+// console.log(calculateCartPrice(2))     // output = 2
+
+
+// function calculateCartPrice(...num1) {
+
+//     return num1
+    
+// }
+// console.log(calculateCartPrice(200,300,400))     // output =[200,300,400]
+
+
+
+
+// function calculateCartPrice(val1,val2, ...num1) {
+
+//     return num1
+    
+// }
+// console.log(calculateCartPrice(200,300,400,500))     // output =(val1= 200 ,val2=300,  num1= [400,500])
+
+
+const user = { 
+    username : "parth",
+    price : 199
+}
+
+function handleObject(anyobject) {
+   console.log(`Username is ${anyobject.username} and Price is ${anyobject.price}`);
+}
+
+// handleObject(user)
+ handleObject({
+    username : "parth",
+    price : 199
+ })
+
+
+
+ const myNewArray =[200,300,400,600]
+
+ function returnSecondvalue(getArray){
+
+    return getArray[1]
+    
+ }
+
+ console.log(returnSecondvalue(myNewArray));
+//  console.log(returnSecondvalue([200,300,400,600]));
+
