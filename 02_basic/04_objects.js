@@ -87,14 +87,14 @@ console.log(instructor);
 
 {
     "name":"parth",
-    "coursename":"js-hindi",
+    "coursename":"js-hindi",                      // JSON
     "price": "free"
 }
 
 
 [
     {},
-    {},
+    {},                                    // JSON in array formate
     {},
     {}
 ]
