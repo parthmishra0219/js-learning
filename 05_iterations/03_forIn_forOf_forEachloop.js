@@ -44,10 +44,10 @@
 
 // Map 
 
-// const  map = new Map()
-// map.set('IN', "India")
-// map.set('USA', "United State of America")
-// map.set("FR", "France")
+const  map = new Map()
+map.set('IN', "India")
+map.set('USA', "United State of America")
+map.set("FR", "France")
 
 
 // console.log(map);
@@ -59,13 +59,15 @@
 
 
 
-const myObject = {
-    game1 : 'NFS',
-    game2 : 'spiderman'
 
-}
 
- for (const [key,value] of myObject) {
-     console.log(key, ':-', value);           // myObject is not iterable
+// const myObject = {
+//     game1 : 'NFS',
+//     game2 : 'spiderman'
+
+// }
+
+//  for (const [key,value] of myObject) {
+//      console.log(key, ':-', value);           // myObject is not iterable
     
- }
+//  }
