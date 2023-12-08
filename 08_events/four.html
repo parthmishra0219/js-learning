@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript learning</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+
+let intervalId
+const startChangingPointer = function(){
+
+      function sayDate(){
+      console.log("hi" ,Date.now());
+
+      }
+
+     intervalId =  setInterval(sayDate ,1000)
+
+}
+
+
+const stopChangingPointer = function(){
+
+    clearTimeout(intervalId)
+    console.log("stopped")
+}
+
+
+document.querySelector('#start').addEventListener('click', startChangingPointer)
+
+document.querySelector('#stop').addEventListener('click',stopChangingPointer)
+
+
+</script>
+</html>
+
+
+
