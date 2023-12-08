@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card Example</title>
+    <style>
+        /* Styling for the user card */
+        .user-card {
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Styling for the user photo */
+        .user-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: rgb(218, 255, 196);">
+
+<div id="userCard" class="user-card">
+    <img id="userPhoto" class="user-photo" src="" alt="User Photo">
+    <h2 id="userName"></h2>
+    <p>Followers: <span id="userFollowers"></span></p>
+    <p>Following: <span id="userFollowing"></span></p>
+</div>
+
+<script>
+    // GitHub API endpoint for a user (replace 'USERNAME' with the actual GitHub username)
+    const apiUrl = 'https://api.github.com/users/hiteshchoudhary';
+
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Configure it as a GET request to the GitHub API
+    xhr.open('GET', apiUrl, true);
+
+    // Set up the callback for when the request completes
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            // Parse the JSON response
+            const userData = JSON.parse(xhr.responseText);
+
+            // Update the HTML with user data
+            document.getElementById('userPhoto').src = userData.avatar_url;
+            document.getElementById('userName').innerText = userData.name || userData.login;
+            document.getElementById('userFollowers').innerText = userData.followers;
+            document.getElementById('userFollowing').innerText = userData.following;
+        } else {
+            console.error('Error fetching user data:', xhr.statusText);
+        }
+    };
+
+    // Set up the callback for when there's an error with the request
+    xhr.onerror = function () {
+        console.error('Network error while fetching user data');
+    };
+
+    // Send the request
+    xhr.send();
+</script>
+
+</body>
+</html>
